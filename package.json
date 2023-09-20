@@ -4,7 +4,8 @@
   "description": "Question asking platform",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "author": "Sanskar Maliwad",
   "license": "ISC",
@@ -25,7 +26,7 @@
     "validator": "^13.9.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.22"
   },
   "keywords": []
 }

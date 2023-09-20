@@ -46,7 +46,8 @@
                 </button>
             </span>
             <% if(user && answer.author.id.equals(user._id)){ %>
-              <button type="button" style="cursor:pointer;" onclick="doDelete('<%= answer._id %>');"><i
+              <button type="button" style="cursor:pointer;" onclick="doDelete('<%= answer._id %>');">
+                <i
                   class="fas fa-trash"></i></button>
               <% } %>
           </div>

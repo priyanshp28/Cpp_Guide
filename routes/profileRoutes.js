@@ -6,21 +6,11 @@ const { requireAuth } = require("../middleware/authMiddleware");
 const router = Router();
 
 //show a user.
-// router.get("/:id", requireAuth, (req, res) => {
-//   User.findById(req.params.id)
-//     .populate(["answers", "questions"])
-//     .exec((err, userfound) => {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         res.render("profile", { userOP: userfound });
-//       }
-//     });
-// });
 router.get("/:id", requireAuth, (req, res) => {
   User.findById(req.params.id)
     .populate(["answers", "questions"])
     .then((userfound)=>{
+      // console.log(userfound)
       res.render("profile", { userOP: userfound });
     })
     .catch((err)=>{
@@ -28,10 +18,10 @@ router.get("/:id", requireAuth, (req, res) => {
     })
 });
 
-router.get("/answer/show/:id", requireAuth, answersController.detailAnswer_get);
+router.get("/answers/show/:id", requireAuth, answersController.detailAnswer_get);
 
 router.get(
-  "/question/:id",
+  "/questions/QuestionDisplay/:id",
   requireAuth,
   questionsController.detailQuestion_get
 );

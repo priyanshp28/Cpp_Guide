@@ -26,9 +26,9 @@ all the questions and answers of the user. -->
           <% for (var i=0; i < userOP.answers.length; i++) { %>
             <ul style="-webkit-overflow-scrolling: touch">
               <li class="op">
-                Answer <%= i+1 %>
-                  <a href="/profile/answer/show/<%= userOP.answers[i]._id %>">
-                    <i class="fas fa-external-link-alt" style="margin-left: 70px">
+                <a href="/profile/answers/show/<%= userOP.answers[i]._id %>">
+                  Answer <%= i+1 %>
+                  <i class="fas fa-external-link-alt" style="margin-left: 70px">
                     </i>
                   </a>
               </li>
@@ -45,8 +45,8 @@ all the questions and answers of the user. -->
           <% for (var i=0; i < userOP.questions.length; i++) { %>
             <ul style="-webkit-overflow-scrolling: touch">
               <li class="op">
-                Question<%= i+1 %>
-                  <a href="/profile/question/<%= userOP.questions[i]._id %>">
+                <a href="/profile/questions/QuestionDisplay/<%= userOP.questions[i]._id %>">
+                    Question<%= i+1 %>
                     <i class="fas fa-external-link-alt" style="margin-left: 70px">
                     </i>
                   </a>

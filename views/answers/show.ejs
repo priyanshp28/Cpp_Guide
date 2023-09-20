@@ -6,6 +6,10 @@
   <title>CPP-Guide</title>
   <link rel="stylesheet" href="/styles.css" />
   <!-- Include stylesheet for Quill and highlight.js-->
+  <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+ <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- <script src="https://kit.fontawesome.com/6e18d74916.js" crossorigin="anonymous"></script> -->
+
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css" />
@@ -148,7 +152,8 @@
                 </p>
                 <% if(user && comment.author.id.equals(user._id)){ %>
                   <button type="button" onclick="doDelete('<%= comment._id %>');">
-                    <i class="fas fa-trash"></i>
+                    <!-- <i class="fas fa-trash"></i> -->
+                    <i class="fa-solid fa-trash"></i>
                   </button>
                   <% } %>
               </div>
